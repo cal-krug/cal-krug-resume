@@ -9,7 +9,7 @@ This results in, you guessed it, modularity and DRYer code.
 /* This means that every class should NOT style elements (such as an <h3>) to be dependent on a containing element
 (such as a header or footer). These should be separate and reusable ANYWHERE in the document regardless of
 structural context.
-For contextual clarify, "content" refers to elements like images, paragraphs, and divs, which are then nestled
+For contextual clarity, "content" refers to elements like images, paragraphs, and divs, which are then nestled
 into other "container" elements.
 Containers can be represented by a structure class. */
 
@@ -26,14 +26,20 @@ alone would belong here, like: height, width, margins, overflow, padding, etc..
 Class examples: "btn-small", "btn-right" */
 /* 
 
-/* Column for right side stuff */
+/* Column */
 
-/* 
-.col-right {
-    //top | right | bottom | left
-    margin: 0 12rem 0 50rem;
-} 
-*/
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Column with stuff aligned right */
+
+.col-align-right {
+    align-items: end;
+}
+
 
 
 
