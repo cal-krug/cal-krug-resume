@@ -1,0 +1,52 @@
+/* This is attempt at OOCSS (Object-Oriented CSS)
+Citations: https://www.keycdn.com/blog/oocss
+
+The basic primary concept is to organize CSS classes and make them into reuseable "modules" (objects)
+with "states" (conditions) to apply to elements.
+This results in, you guessed it, modularity and DRYer code.
+
+/* Second principle of OOCSS: Separate Container and Content (the first one is covered below). */
+/* This means that every class should NOT style elements (such as an <h3>) to be dependent on a containing element
+(such as a header or footer). These should be separate and reusable ANYWHERE in the document regardless of
+structural context.
+For contextual clarity, "content" refers to elements like images, paragraphs, and divs, which are then nestled
+into other "container" elements.
+Containers can be represented by a structure class. */
+
+
+
+/* First principle: Separate Structure and Skin */
+
+/* STRUCTURES - define repeating "invisible" patterns (like width, margins, etc) as reusable STRUCTURES
+(I.e. how things are laid out)
+
+Hint: An example of an entire "structure" would be a "btn-small" class, or small button, and all the invisible patterns
+would be the contents of that class. I.e., everything that would make a "button" look like a button and that
+alone would belong here, like: height, width, margins, overflow, padding, etc..
+Class examples: "btn-small", "btn-right" */
+/* 
+
+/* Column */
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Column with stuff aligned right */
+
+.col-align-right {
+    align-items: end;
+}
+
+
+
+
+/* SKINS - define repeating visual patterns as reusable SKINS
+(I.e. what the layout looks like)
+
+Hint: An example of a skin class will be looked in the "btn" example I provided above. The structure of the
+button is already accomplished (i.e., we *made* a button); now we just have to apply a skin to the button.
+Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
+Class examples: "btn-green", "heading-green" */
