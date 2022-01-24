@@ -40,6 +40,11 @@ Class examples: "btn-small", "btn-right" */
     align-items: end;
 }
 
+/* Row Displaying list items horizontally */
+.row li {
+   display: inline-block;
+}
+
 
 
 
@@ -50,3 +55,32 @@ Hint: An example of a skin class will be looked in the "btn" example I provided 
 button is already accomplished (i.e., we *made* a button); now we just have to apply a skin to the button.
 Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
 Class examples: "btn-green", "heading-green" */
+
+/*BACKGROUND*/
+/* Background attached to viewport */
+.bg-attach-viewport {
+    background-attachment: scroll;
+}
+/* Background with a charcoal color, transparency 50 */
+.bg-charcoal-trans50 {
+    background-color: #25252550;
+}
+/* Background with a red/purple gradient */
+.bg-grad-red-purple {
+    background: linear-gradient(red, purple);
+}
+
+/*COLOR*/
+/* Color for smoke white text */
+.color-text-white {
+    color: whitesmoke;
+}
+.color-text-white a {
+    color: whitesmoke;
+}
+
+/*PADDING*/
+/* neat padding */
+.padding-neat {
+    padding: 2em;
+}
