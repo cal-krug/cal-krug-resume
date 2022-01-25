@@ -8,6 +8,10 @@
     <meta charset="UTF-8">
     <!-- Webpage's Title -->
     <title>Home | MCK</title>
+    <!-- Scripts (loads ASAP, see: https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)-->
+    <script src="scripts/coffee.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/beersOnTheWall.js" defer></script>
     <!-- Webpage's Authorship -->
     <meta name="author" content="Michael &quot;Cal&quot; Krug">
     <!-- Webpage's Description: Used in search engine result pages -->
@@ -29,8 +33,8 @@
         5. Footer (<footer>)
     The Sections are marked by comments explaining their use below.
 -->
-<body class="bg-attach-viewport bg-grad-red-purple color-text-white">
-    <div class="bg-charcoal-trans50 padding-neat">
+<body class="bg-attach-viewport color-text-white">
+    <div class="bg-charcoal-trans50 space-margin-padding-2em">
             <!-- Document Section: Header
             (The strip: big heading, logo, tagline, usually the same between pages)
         -->
@@ -41,7 +45,7 @@
             (Links to site's main sections; i.e. the main menu)
         -->
         <nav>
-            <ul class="row">
+            <ul class="padding-remove-left row">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/resume.html">Resume</a></li>
                 <li><!-- A Search form: another common non-linear way to navigate through a website. -->

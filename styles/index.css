@@ -24,27 +24,35 @@ Hint: An example of an entire "structure" would be a "btn-small" class, or small
 would be the contents of that class. I.e., everything that would make a "button" look like a button and that
 alone would belong here, like: height, width, margins, overflow, padding, etc..
 Class examples: "btn-small", "btn-right" */
-/* 
+/*
 
-/* Column */
-
+/*COLUMN*/
 .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
 /* Column with stuff aligned right */
 
 .col-align-right {
     align-items: end;
 }
-
 /* Row Displaying list items horizontally */
 .row li {
    display: inline-block;
 }
 
+/*SPACING*/
+/* Removes margin spacing on the left */
+.padding-remove-left {
+    padding-left: 0em;
+}
+/* neat margins and padding with 2em */
+.space-margin-padding-2em {
+    padding: 2em;
+    /* top | horizontal | bottom */
+    margin: 2em 32px 2em;
+}
 
 
 
@@ -56,6 +64,7 @@ button is already accomplished (i.e., we *made* a button); now we just have to a
 Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
 Class examples: "btn-green", "heading-green" */
 
+
 /*BACKGROUND*/
 /* Background attached to viewport */
 .bg-attach-viewport {
@@ -64,10 +73,6 @@ Class examples: "btn-green", "heading-green" */
 /* Background with a charcoal color, transparency 50 */
 .bg-charcoal-trans50 {
     background-color: #25252550;
-}
-/* Background with a red/purple gradient */
-.bg-grad-red-purple {
-    background: linear-gradient(red, purple);
 }
 
 /*COLOR*/
@@ -79,8 +84,10 @@ Class examples: "btn-green", "heading-green" */
     color: whitesmoke;
 }
 
-/*PADDING*/
-/* neat padding */
-.padding-neat {
-    padding: 2em;
+/*--------------------------------------------*/
+/*ELEMENT SELECTORS (Exceptions to the rule)*/
+/* Background with a red/purple gradient */
+html {
+    background: linear-gradient(red, purple);
+    background-attachment: fixed;
 }
