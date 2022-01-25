@@ -26,7 +26,7 @@ alone would belong here, like: height, width, margins, overflow, padding, etc..
 Class examples: "btn-small", "btn-right" */
 /*
 
-/*COLUMN*/
+/*COLUMN AND ROWS*/
 .col {
     display: flex;
     flex-direction: column;
@@ -53,6 +53,28 @@ Class examples: "btn-small", "btn-right" */
     /* top | horizontal | bottom */
     margin: 2em 32px 2em;
 }
+/* Space for navigation */
+.space-nav {
+    /* top | horizontal | bottom */
+    padding: 0em 1em 0em;
+    /* top | horizontal | bottom */
+    margin-right: 0em 1em 0em;
+}
+.space-nav a {
+    /* top | horizontal | bottom */
+    padding: 0em .5em 0em;
+}
+/* Removes margin spacing on the left */
+.text-align-center {
+    text-align: center;
+}
+
+/*OVERFLOW*/
+/* Handles overflow into a scroll */
+.overflow-scroll {
+    overflow: scroll;
+
+}
 
 
 
@@ -64,6 +86,45 @@ button is already accomplished (i.e., we *made* a button); now we just have to a
 Keep in mind that this includes ANYTHING visual, like: colors, gradients, visible borders, shadows, etc.
 Class examples: "btn-green", "heading-green" */
 
+/*COLOR PALLETE: (Also based loosely off of):
+https://www.colourlovers.com/palette/81459/cherry_cream
+https://www.colourlovers.com/palette/921815/Cherry_Bomb
+
+"Charcoal" (Burned Grey)
+#252525
+"Pluto Skin" (Beige, Sandy but Creamy)
+#F0D8C0
+"Cocoa" (Brown, Warm)
+#441c15
+"Downfall" (Red, for Redemption)
+#901818
+"Cranberry" (Purple, Passionate)
+#601830
+"Fresh Air" (Blue, Airy)
+#AEBDFF
+*/
+
+/*ANIMATION*/
+/* Animation box */
+.anim-box {
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    color: pink;
+    background-color: red;
+    position: relative;
+    animation-name: anim-box-rainbow;
+    animation-duration: 5s;
+    /* iterate the animation a thousand times */
+    animation-iteration-count: 1000;
+}
+@keyframes anim-box-rainbow {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
 
 /*BACKGROUND*/
 /* Background attached to viewport */
@@ -76,18 +137,70 @@ Class examples: "btn-green", "heading-green" */
 }
 
 /*COLOR*/
-/* Color for smoke white text */
-.color-text-white {
-    color: whitesmoke;
+/* Color for search query fields and buttons */
+.color-nav {
+    background-color: #441c15;
+    color: #F0D8C0;
+    border: .15em solid #010000;
 }
-.color-text-white a {
-    color: whitesmoke;
+/* Color for  text */
+.color-text-body {
+    color: #F0D8C0;
+}
+.color-text-body a {
+    color: #AEBDFF;
+}
+.color-text-body a:hover {
+    color: #901818;
+}
+
+/*DECORATION*/
+/* Removes decoration of links */
+.link-decor-remove a {
+    text-decoration: none;
+}
+
+/*FONTS*/
+/* "Crimson Pro" */
+.font-crimson-pro {
+    font-family: 'Crimson Pro';
+    font-size: 20px;
+}
+/* "Eagle Lake" */
+.font-eagle-lake {
+    font-family: 'Eagle Lake';
+    font-size: 32px;
+}
+
+/*IMAGES*/
+.img-typical {
+    display: inline-flex;
+    /* "floats" an image to the left in the case of overlap */
+    float: left;
+    height: 12em;
+    width: 14em;
+    margin: 1em;
+}
+
+/*SHADOW*/
+/* A shadow aura for links */
+.shadow-haven {
+    color: #F0D8C0;
+}
+.shadow-haven a:hover {
+    color: #F0D8C0;
+    /* color | offset-x | offset-y | blur-radius */
+    text-shadow: #AEBDFF 1px 0 10px;
+}
+.shadow-fairy {
+    /* color | offset-x | offset-y | blur-radius */
+    text-shadow: #f7aeff 1px 0 3px;
 }
 
 /*--------------------------------------------*/
 /*ELEMENT SELECTORS (Exceptions to the rule)*/
 /* Background with a red/purple gradient */
 html {
-    background: linear-gradient(red, purple);
+    background: linear-gradient(#901818, #601830);
     background-attachment: fixed;
 }

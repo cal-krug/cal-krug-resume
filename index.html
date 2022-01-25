@@ -23,6 +23,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Webpage's styling; i.e. the Cascading Style Sheet (CSS3) of this page -->
     <link rel="stylesheet" href="styles/index.css">
+    <!-- Custom Remote Font (Google)-->
+        <!-- "Crimson Pro"-->
+        <link href='https://fonts.googleapis.com/css?family=Crimson Pro' rel='stylesheet'>
+        <!-- "Eagle Lake"-->
+        <link href='https://fonts.googleapis.com/css?family=Eagle Lake' rel='stylesheet'>
+    <!-- ************************** -->
+
 </head>
 <!-- Contents of the webpage (cite.: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
     Usually contains five basic sections:
@@ -33,25 +40,25 @@
         5. Footer (<footer>)
     The Sections are marked by comments explaining their use below.
 -->
-<body class="bg-attach-viewport color-text-white">
+<body class="bg-attach-viewport color-text-body">
     <div class="bg-charcoal-trans50 space-margin-padding-2em">
             <!-- Document Section: Header
             (The strip: big heading, logo, tagline, usually the same between pages)
         -->
-        <header>
-            <h1>MCK: Full-Stack Development</h1>
+        <header class="color-nav text-align-center space-nav overflow-scroll">
+            <h1 class="shadow-haven font-eagle-lake">MCK: Full-Stack Development</h1>
         </header>
         <!-- Document Section: Navigation Bar
             (Links to site's main sections; i.e. the main menu)
         -->
-        <nav>
-            <ul class="padding-remove-left row">
+        <nav class="color-nav shadow-haven link-decor-remove">
+            <ul class="padding-remove-left row space-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/resume.html">Resume</a></li>
                 <li><!-- A Search form: another common non-linear way to navigate through a website. -->
                     <form>
-                    <input type="search" name="q" placeholder="Search query">
-                    <input type="submit" value="Go!">
+                    <input type="search" class="color-nav" name="search-query" placeholder="Search query">
+                    <input type="submit" class="color-nav" value="Go!">
                     </form>
                 </li>
             </ul>
@@ -59,7 +66,7 @@
         <!-- Document Section: Main Content 
             (Main content that's unique to this webpage)
         -->
-        <main>
+        <main class="shadow-haven link-decor-remove font-crimson-pro">
 
             <!-- Webpage contains an article.
                 <article> encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
@@ -77,11 +84,16 @@
 
                 <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
 
-                <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+                <img class="img-typical" src="assets/img/one-ring.webp" alt="The One Ring">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora dignissimos atque aut expedita, assumenda quis. Modi, iusto voluptas incidunt explicabo sit aliquam reiciendis tempora sed itaque illum, recusandae numquam. Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. </p>
 
                 <h3>Another subsection</h3>
 
                 <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+
+                <!-- Demonstration of CSS animation -->
+                <div class="anim-box shadow-fairy">[fairy]</div>
 
                 <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
             </article>
